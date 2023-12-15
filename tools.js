@@ -10,9 +10,7 @@ export const getTitle = () => {
 	}
 };
 
-export const getSubtitle = () => {
-	return 'a learn site';
-};
+export const getSubtitle = (text) => `a ${text} site`; 
 
 /**
  * showFlashcard
@@ -43,4 +41,13 @@ export const getSumOfNumbers = (nums) => {
 		sum += nums[0]
 	}
 	return sum;
+}
+
+export const doubleAllNumbers = (nums) => {
+	const retNums = [];
+	for (let i = 0; i < nums.length; i++) {
+		retNums.push(nums[i] * 2);
+		console.log(retNums);
+	}
+	return retNums;
 }
