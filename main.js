@@ -1,9 +1,21 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import './style.css';
+import javascriptLogo from './javascript.svg';
+import viteLogo from '/vite.svg';
+import { setupCounter } from './counter.js';
 
-const message = 'this is the function site';
+const accessGroup = 'ember';
+
+function getTitle() {
+  if (accessGroup === 'member') {
+    return 'Function Demo Site';
+  } else if (accessGroup === 'vipMember') {
+    return 'VIP Function Demo Site';
+  } else {
+    return 'Guest Demo Site';
+  }
+}
+
+const title = getTitle();
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -13,7 +25,7 @@ document.querySelector('#app').innerHTML = `
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
     </a>
-    <h1>${message}</h1>
+    <h1>${title}</h1>
     <div class="card">
       <button id="counter" type="button"></button>
     </div>
@@ -21,6 +33,6 @@ document.querySelector('#app').innerHTML = `
       Click on the Vite logo to learn more
     </p>
   </div>
-`
+`;
 
-setupCounter(document.querySelector('#counter'))
+setupCounter(document.querySelector('#counter'));
