@@ -11,6 +11,8 @@ const num2 = tools.getRndInteger(1, 10);
 const nums = [4, 15, 6];
 const nums2 = tools.doubleAllNumbers(nums);
 
+const baseName = "Axel";
+
 document.querySelector('#app').innerHTML = `
   <div>
     <h1>${title}</h1>
@@ -21,6 +23,14 @@ document.querySelector('#app').innerHTML = `
     <hr>
     <p>${addExercises[0].num1} + ${addExercises[0].num2} = ${tools.add(addExercises[0].num1, addExercises[0].num2)}</p>
     <p>${addExercises[1].num1} + ${addExercises[1].num2} = ${tools.add(addExercises[1].num1, addExercises[1].num2)}</p>
+  <hr>
+  <h3>Base name: ${baseName}</h3>
+  <p>Names with the same amount of letters are:</p>
+  <ul>
+    ${names.map(name => {
+      return tools.textsHaveEqualLenth(baseName, name) ? `<li>${name}</li>` : ''
+    }).join('')}
+  </ul>
   <hr>
   <p>Random number between 6 and 10: ${tools.getRndInteger(6,10)}</p>
   <hr>
@@ -36,6 +46,7 @@ document.querySelector('#app').innerHTML = `
       return `<li style="color: ${tools.startsWithCapitalLetter(name) ? 'green' : 'red'}">${name}</li>`;
     }).join('')}
   </ul>
+
   </div>
 `;
 

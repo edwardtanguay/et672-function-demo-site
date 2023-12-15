@@ -61,3 +61,7 @@ export const getRandomMessage = () => {
 	const rand = tools.getRndInteger(1, 10);
 	return `Message ${rand}`;
 }
+
+export const textsHaveEqualLenth = (text1, text2) => {
+	return text1.length === text2.length;
+}
