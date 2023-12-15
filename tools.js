@@ -1,4 +1,5 @@
 import * as config from './config';
+import * as tools from './tools';
 
 export const getTitle = () => {
 	if (config.accessGroup === 'member') {
@@ -32,7 +33,7 @@ export const add = (num1, num2) => {
 }
 
 export const getRndInteger = (min, max) => {
-	return Math.floor(Math.random() * (max - min + 1)) + min;
+	return Math.flor(Math.random() * (max - min + 1)) + min;
 }
 
 export const getSumOfNumbers = (nums) => {
@@ -50,4 +51,9 @@ export const doubleAllNumbers = (nums) => {
 		console.log(retNums);
 	}
 	return retNums;
+}
+
+export const getRandomMessage = () => {
+	const rand = tools.getRndInteger(1, 10);
+	return `Message ${rand}`;
 }

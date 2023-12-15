@@ -26,6 +26,8 @@ document.querySelector('#app').innerHTML = `
   <p>${num1} + ${num2} = ${tools.add(num1, num2)}</p>
   <hr>
   <p>${nums.join(', ')} doubled is ${nums2.join(', ')}</p>
+  <hr>
+  <p>${tools.getRandomMessage()}</p>
   </div>
 `;
 
