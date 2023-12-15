@@ -1,6 +1,7 @@
 import './style.css';
 import * as tools from './tools';
 import addExercises from './data/addExercises.json';
+import names from './data/names.json';
 
 const title = tools.getTitle();
 
@@ -9,8 +10,6 @@ const num2 = tools.getRndInteger(1, 10);
 
 const nums = [4, 15, 6];
 const nums2 = tools.doubleAllNumbers(nums);
-
-const names = ['James', 'hans', 'peter', 'Robert'];
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -34,7 +33,7 @@ document.querySelector('#app').innerHTML = `
   <h3>Names</h3>
   <ul>
     ${names.map(name => {
-      return `<li>${name}</li>`;
+      return `<li style="color: ${tools.startsWithCapitalLetter(name) ? 'green' : 'red'}">${name}</li>`;
     }).join('')}
   </ul>
   </div>
