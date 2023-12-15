@@ -33,7 +33,11 @@ export const add = (num1, num2) => {
 }
 
 export const getRndInteger = (min, max) => {
-	return Math.flor(Math.random() * (max - min + 1)) + min;
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+export const startsWithCapitalLetter = (text) => {
+	return text[0] === text[0].toUpperCase();
 }
 
 export const getSumOfNumbers = (nums) => {

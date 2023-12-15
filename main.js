@@ -10,6 +10,8 @@ const num2 = tools.getRndInteger(1, 10);
 const nums = [4, 15, 6];
 const nums2 = tools.doubleAllNumbers(nums);
 
+const names = ['James', 'hans', 'peter', 'Robert'];
+
 document.querySelector('#app').innerHTML = `
   <div>
     <h1>${title}</h1>
@@ -28,6 +30,13 @@ document.querySelector('#app').innerHTML = `
   <p>${nums.join(', ')} doubled is ${nums2.join(', ')}</p>
   <hr>
   <p>${tools.getRandomMessage()}</p>
+  <hr>
+  <h3>Names</h3>
+  <ul>
+    ${names.map(name => {
+      return `<li>${name}</li>`;
+    }).join('')}
+  </ul>
   </div>
 `;
 
