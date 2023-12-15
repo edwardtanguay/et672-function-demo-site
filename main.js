@@ -1,8 +1,8 @@
 import './style.css';
 import * as tools from './tools';
 import addExercises from './data/addExercises.json';
-import names from './data/names.json';
 import { CompareNames } from './components/CompareNames';
+import { CheckNames } from './components/CheckNames';
 
 const title = tools.getTitle();
 
@@ -30,14 +30,8 @@ document.querySelector('#app').innerHTML = `
   <p>${nums.join(', ')} doubled is ${nums2.join(', ')}</p>
   <hr>
   <p>${tools.getRandomMessage()}</p>
+  ${CheckNames()}
   ${CompareNames()}
-  <hr>
-  <h3>Names</h3>
-  <ul>
-    ${names.map(name => {
-      return `<li style="color: ${tools.startsWithCapitalLetter(name) ? 'green' : 'red'}">${name}</li>`;
-    }).join('')}
-  </ul>
 
   </div>
 `;
