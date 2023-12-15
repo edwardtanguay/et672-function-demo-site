@@ -28,7 +28,7 @@ document.querySelector('#app').innerHTML = `
   <p>Names with the same amount of letters are:</p>
   <ul>
     ${names.map(name => {
-      return tools.textsHaveEqualLenth(baseName, name) ? `<li>${name}</li>` : ''
+      return tools.textsHaveEqualLenth(baseName, name) ? `<li>${tools.capitalizeFirstLetter(name)}</li>` : ''
     }).join('')}
   </ul>
   <hr>

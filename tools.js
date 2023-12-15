@@ -65,3 +65,7 @@ export const getRandomMessage = () => {
 export const textsHaveEqualLenth = (text1, text2) => {
 	return text1.length === text2.length;
 }
+
+export const capitalizeFirstLetter = (text) => {
+	return text[0].toUpperCase() + text.slice(1);
+}
