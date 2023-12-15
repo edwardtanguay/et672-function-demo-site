@@ -28,3 +28,19 @@ export const getSubtitle = () => {
 export const showFlashcard = (front, back) => {
 	return front + ' <span style="color: red">>>></span> ' + back;
 }
+
+export const add = (num1, num2) => {
+	return num1 + num2;
+}
+
+export const getRndInteger = (min, max) => {
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+export const getSumOfNumbers = (nums) => {
+	let sum = 0;
+	for (let i = 0; i < nums.length; i++) {
+		sum += nums[0]
+	}
+	return sum;
+}
